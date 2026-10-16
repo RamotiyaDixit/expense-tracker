@@ -15,8 +15,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: apps/api/package.json
       - name: Install API dependencies
         working-directory: apps/api
         run: npm install
@@ -32,8 +30,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-          cache-dependency-path: apps/web/package.json
       - name: Install frontend dependencies
         working-directory: apps/web
         run: npm install
