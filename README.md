@@ -6,7 +6,7 @@ A full-stack expense tracker built with **Next.js**, **Node.js**, **Express**, a
 
 - Dashboard with current balance, income, expenses, and monthly overview
 - Create and delete income/expense transactions
-- Search and filter transactions by type, category, and date range
+- Search transactions and filter by type or category
 - Export transactions to CSV
 - REST API built with Express and MySQL
 - Docker Compose setup for MySQL
@@ -39,11 +39,14 @@ expense-tracker/
    cd expense-tracker
    ```
 
-2. Copy the sample environment file and update values as needed.
+2. Copy the sample environment file into the app folders so each app loads its own settings.
 
    ```bash
-   cp .env.example .env
+   cp .env.example apps/api/.env
+   cp .env.example apps/web/.env.local
    ```
+
+   The API reads its database settings from `apps/api/.env`; Next.js reads `NEXT_PUBLIC_API_URL` from `apps/web/.env.local`. The sample values match the included Docker Compose database for local development.
 
 3. Start MySQL with Docker Compose.
 
