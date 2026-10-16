@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   ArrowDownLeft, ArrowDownRight, ArrowUpRight, Bell, CalendarDays, Check,
   ChevronDown, CircleHelp, Download, Ellipsis, Filter, LayoutDashboard,
-  LoaderCircle, Plus, Search, Settings2, ShieldCheck, Sparkles, Wallet,
+  LoaderCircle, Plus, Search, ShieldCheck, Sparkles, Wallet,
   X, Trash2, TrendingUp, ReceiptText
 } from 'lucide-react';
 import { api, type Category, type MonthlySummary, type Summary, type Transaction, type TransactionType } from '@/lib/api';
